@@ -13,3 +13,16 @@ int main(){
 
 打印出3，3
 
+
+#include <stdio.h>
+#include <string.h>
+
+int main() {
+    int arr[10] = {10};
+    //printf("%d\n", sizeof(arr) / sizeof(int));  // 计算数组长度
+    for(int i = 0; i<sizeof(arr) / sizeof(int);i++){
+        printf("%d\n",arr[i]);
+    }
+    return 0;
+}
+
