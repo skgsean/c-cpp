@@ -1,0 +1,15 @@
+#include <stdio.h>
+#include <string.h>
+
+int main(){
+
+    char str_1[] = "abc";
+    char str_2[] = {'a','b','c','\0'}; // c语言字符串默认有个\0结尾
+    printf("%zu\n",strlen(str_1));
+    printf("%zu\n",strlen(str_2));
+
+    return 0;
+}
+
+打印出3，3
+
