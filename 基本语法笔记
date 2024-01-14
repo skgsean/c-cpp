@@ -26,3 +26,29 @@ int main() {
     return 0;
 }
 
+
+#include <stdio.h>
+
+int main() {
+    
+    int ret = 0;
+    int c = 0;
+    char password[20] = {0};
+    printf("请输入密码：>");
+    scanf("%s",password);
+    // 将缓冲区的\n读取走，不要影响下面的getchar()，比如用户输入123456 ABCD 这样一个getchar()不够
+    while((c = getchar()) != '\n'){
+        ;
+    }
+    printf("请确认(Y/N):>");
+    ret = getchar();
+
+    if(ret == 'Y'){
+        printf("确认成功\n");
+    }else{
+        printf("放弃确认\n");
+    }
+
+    return 0;
+    
+}
