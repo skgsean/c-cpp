@@ -166,3 +166,26 @@ welcome to#bit!!!!!!!
 welcome to bit!!!!!!!
 welcome to bit!!!!!!!
 */
+
+
+
+#include <stdio.h>
+#include <string.h>
+
+int main() {
+    char password[20] = {0};
+    for(int i = 0; i <3; i++){
+        printf("请输入密码：");
+        scanf("%s",password);
+        if(strcmp(password,"123456") == 0){   // 字符串比较，不能用 == 要用string库函数
+            printf("登录成功\n");
+            break;
+        }else{
+            printf("登录失败\n");
+        }
+    }
+    
+
+    return 0;
+}
+
