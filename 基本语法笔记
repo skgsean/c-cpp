@@ -191,6 +191,7 @@ int main() {
 
 
 // 求两个数的最大公约数
+/*在 C 语言中，计算两个数的最大公约数（GCD，Greatest Common Divisor）通常使用辗转相除法（也称欧几里得算法）。以下是一个实现这一算法的示例代码：*/
 #include <stdio.h>
 
 int gcd(int a, int b) {
@@ -214,4 +215,26 @@ int main() {
     return 0;
 }
 
-/*在 C 语言中，计算两个数的最大公约数（GCD，Greatest Common Divisor）通常使用辗转相除法（也称欧几里得算法）。以下是一个实现这一算法的示例代码：*/
+
+
+#include <stdio.h>
+
+// 找出100-200之间所有的素数
+int main() {
+    int count = 0;
+    
+    for(int i =100; i<=200; i++){
+        int j =0;
+        for(j =2; j<i; j++){
+            if(i%j == 0){
+                break;
+            }
+        }
+        if(i==j){
+            count ++;
+            printf("%d\n",i);
+            }
+    }
+    printf("%d\n",count);
+}
+
