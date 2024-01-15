@@ -75,3 +75,21 @@ int main() {
 
 
 
+
+// 计算阶乘
+#include <stdio.h>
+
+int main() {
+
+    int sum = 0;
+    for(int j = 1; j <= 10; j++){  // 实现 10！+ 9！+ 。。。1！相加
+        int ret=1;
+        for(int i =1; i<=j; i++){  // 计算 j!
+            ret *= i;
+        }
+        sum += ret;
+    }    
+    printf("%d\n",sum);
+    return 0;
+}
+
