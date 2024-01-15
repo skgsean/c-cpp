@@ -238,3 +238,27 @@ int main() {
     printf("%d\n",count);
 }
 
+
+
+#include <stdio.h>
+#include <math.h>
+
+// 找出100-200之间所有的素数
+int main() {
+    int count = 0;
+    
+    for(int i =100; i<=200; i++){
+        int j =0;
+        for(j =2; j<=sqrt(i); j++){  // 判断素数另外一个方法是这个数字开平方内，没有整除的
+            if(i%j == 0){
+                break;
+            }
+        }
+        if(j>sqrt(i)){
+            count ++;
+            printf("%d\n",i);
+            }
+    }
+    printf("素数的个数：%d\n",count);
+}
+
