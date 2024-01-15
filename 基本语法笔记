@@ -123,3 +123,46 @@ int main() {
     return 0;
 }
 
+
+
+
+
+#include <stdio.h>
+#include <string.h>
+#include <unistd.h>
+
+int main() {
+    char arr1[] = "welcome to bit!!!!!!!";
+    char arr2[] = "#####################";
+    int left = 0;
+    int right = strlen(arr1)-1;  // 因为字符串末尾有个\0。这里不能用sizeof()函数计算长度
+
+    while(left <= right){
+        arr2[left] = arr1[left];
+        arr2[right] = arr1[right];
+        printf("%s\n",arr2);
+        // 休息一秒
+        sleep(1);
+        left++;
+        right--;
+    }
+    printf("%s\n",arr2);
+
+    return 0;
+}
+
+/*
+bash-3.2$ ./a.out 
+w###################!
+we#################!!
+wel###############!!!
+welc#############!!!!
+welco###########!!!!!
+welcom#########!!!!!!
+welcome#######!!!!!!!
+welcome #####t!!!!!!!
+welcome t###it!!!!!!!
+welcome to#bit!!!!!!!
+welcome to bit!!!!!!!
+welcome to bit!!!!!!!
+*/
