@@ -292,3 +292,60 @@ bash-3.2$ ./a.out
 bash-3.2$ 
 
 
+
+// 猜数字游戏
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
+void menu()
+{
+printf("**********************************\n");
+printf("*********** 1.play **********\n");
+printf("*********** 0.exit **********\n");
+printf("**********************************\n");
+printf("请输入选项：\n");
+}
+
+void playGame(){
+    int inputNum;
+    int randomNum = rand()%100+1;
+    printf("产生的随机数字：%d\n",randomNum);
+    while(1){
+        printf("请输入数字：\n");
+        scanf("%d",&inputNum);
+        if(inputNum > randomNum){
+            printf("猜大了。\n");
+        }else if(inputNum < randomNum){
+            printf("猜小了。\n");
+        }else{
+            printf("猜中了。\n");
+            break;
+        }
+    }
+}
+
+
+int main(){
+    srand((unsigned)time(NULL));
+    while(1){
+        menu();
+        int input;
+        scanf("%d", &input);
+        if(input == 1){
+            printf("开始玩游戏。\n");
+            playGame();
+        }else if(input == 0){
+            printf("不玩了。\n");
+            break;
+        }else{
+            printf("输入有误。\n");
+        }
+    }
+    
+
+
+    return 0;
+}
+
