@@ -461,3 +461,33 @@ int main(){
     }
     return 0;
 }
+
+
+
+
+// 实现每次调用函数次数加1
+#include <stdio.h>
+
+void Add(int* p){
+    (*p)++ ;
+}
+
+int main(){
+    int num = 0;
+    Add(&num);
+    printf("%d\n",num);
+    Add(&num);
+    printf("%d\n",num);
+    Add(&num);
+    printf("%d\n",num);
+    Add(&num);
+    printf("%d\n",num);
+    return 0;
+}
+
+/*bash-3.2$ ./a.out 
+1
+2
+3
+4
+*/
