@@ -535,3 +535,23 @@ int main(){
     return 0;
 }
 
+
+
+// 模拟strlen函数求字符串长度，不创建临时变量count，用递归
+#include <stdio.h>
+int my_strlen(char* str){
+    if(*str !='\0'){
+        return 1+my_strlen(str + 1);
+    }else{
+        return 0;
+    }
+}
+
+int main(){
+    char arr[] = "bit";
+    int len = my_strlen(arr); // 数组传参是传入的数组首元素的地址
+    printf("%d\n",len);
+    
+    return 0;
+}
+
