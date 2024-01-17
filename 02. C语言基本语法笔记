@@ -1,0 +1,14 @@
+#include <stdio.h>
+#include <string.h>
+
+
+int main() {
+    char arr1[] = "abc";
+    char arr2[] = {'a','b','c'};
+    printf("%lu\n",sizeof(arr1));  // 4  注意，如果数组类型是int，则一个元素占4个字节
+    printf("%lu\n",sizeof(arr2));  // 3
+    printf("%lu\n",strlen(arr1));  // 3
+    printf("%lu\n",strlen(arr2));  // 3  // 不同环境测试可能不同，可能会出现随机值
+
+    return 0;
+}
