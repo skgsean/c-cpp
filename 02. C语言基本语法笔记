@@ -118,3 +118,39 @@ int main(){
 
     return 0;
 }
+
+
+#include <stdio.h>
+// 交换两个数的值
+
+
+int main() {
+    int a = 3;
+    int b = 5;
+
+    // // 创建临时变量的方法
+    // int tmp = 0;
+    // tmp = a;
+    // a=b;
+    // b=tmp;
+
+
+    // // 不创建临时变量的方法  但这种情况当ab都很大的时候，相加后可能会内存溢出
+    // a = a+ b;
+    // b = a-b;
+    // a = a-b;
+
+    printf("a=%d, b=%d\n",a,b);
+
+    // 使用异或操作符不会导致内存溢出
+    a = a^b;
+    b = a^b;
+    a = a^b;
+
+    printf("a=%d, b=%d\n",a,b);
+
+
+
+
+    return 0;
+}
