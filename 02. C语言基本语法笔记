@@ -148,9 +148,26 @@ int main() {
     a = a^b;
 
     printf("a=%d, b=%d\n",a,b);
+    return 0;
+}
 
 
+#include <stdio.h>
+// 计算一个数的二进制有多少个1，这里仅限正整数
 
+int main() {
+    int num = 0;
+    int count = 0;
+    scanf("%d",&num);
+
+    while(num){
+        if(num%2 == 1){
+            count ++;
+            num = num / 2;
+        }
+    }
+    printf("%d\n", count);
 
     return 0;
 }
+
