@@ -240,3 +240,24 @@ int main() {
 }
 
 
+
+// 指针的例子
+#include <stdio.h>
+
+int my_strlen(char* str){
+    char* start = str;
+    char* end = str;
+    while(*end != '\0'){
+        end ++;
+    }
+    return end-start;  //  得到字符串长度
+}
+
+
+int main() {
+
+    char arr[] = "bit";
+    int len = my_strlen(arr);
+    printf("%d\n",len);  // 3
+    return 0;
+}
