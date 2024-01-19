@@ -171,3 +171,24 @@ int main() {
     return 0;
 }
 
+
+
+#include <stdio.h>
+// 计算一个数的二进制有多少个1，不仅限正整数
+
+int main() {
+    int num = 0;
+    int count = 0;
+    scanf("%d",&num);
+
+   int i = 0;
+   for(i = 0;i<32;i++){
+    if((num >> i & 1)==1){
+        count++;
+    }
+   }
+    printf("%d\n", count);
+
+    return 0;
+}
+
