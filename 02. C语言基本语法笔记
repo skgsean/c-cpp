@@ -261,3 +261,24 @@ int main() {
     printf("%d\n",len);  // 3
     return 0;
 }
+
+
+
+// 指针的例子
+#include <stdio.h>
+
+
+
+int main() {
+
+    int arr[10] = {0};
+    printf("%p\n",arr);  // 首元素地址 0x16dd2f250
+    printf("%p\n",arr+1);   //       0x16dd2f254
+
+    printf("%p\n",&arr[0]); //  0x16dd2f250
+    printf("%p\n",&arr[0]+1);// 0x16dd2f254
+
+    printf("%p\n",&arr);   // 0x16dd2f250  &arr -> &数组名 取出的是整个数组的地址
+    printf("%p\n",&arr+1); // 0x16dd2f278
+    return 0;
+}
