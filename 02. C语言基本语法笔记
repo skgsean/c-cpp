@@ -326,3 +326,25 @@ int main() {
     return 0;
 }
 
+
+// 二级指针
+#include <stdio.h>
+
+int main() {
+
+    int a = 10;
+    int b = 20;
+    int c = 30;
+
+    int* arr[3] = {&a,&b,&c};
+
+    int i = 0;
+    for(i = 0; i <3; i++){
+        printf("%d\n", *(arr[i]));  // 10 20 30
+    }
+
+    int* p = &a;
+    int ** pp = &p;  // 二级指针
+    printf("%p\n", pp);  // 0x16cfaf240
+    return 0;
+}
