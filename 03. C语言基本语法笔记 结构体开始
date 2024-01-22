@@ -89,3 +89,33 @@ int main()
 }
 
 
+
+
+// 结构体放结构体
+#include <stdio.h>
+struct s
+{
+    int a;
+    char c;
+    char arr[20];
+    double d;
+};
+
+struct t
+{
+    char ch[10];
+    struct s s;
+    char *pc;
+};
+
+int main()
+{
+    char arr[] = "hello bit\n";
+    struct t t = {"hehe", {100, 'w', "hello world", 3.14}, arr};
+    printf("%s\n", t.ch); // hehe
+    printf("%s\n", t.s.arr); // hello world
+    printf("%lf\n", t.s.d); // 3.14
+    printf("%s\n", t.pc);  //hello bit
+
+    return 0;
+}
