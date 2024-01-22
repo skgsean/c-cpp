@@ -172,3 +172,18 @@ int main(){
     return 0;
 }
 
+
+
+// 写一段代码判断当前机器的字节序是小端还是大端
+#include <stdio.h>
+
+int main(){
+    int a = 1;
+    char* p = (char*)&a;
+    if(*p == 1){
+        printf("小端\n");
+    }else{
+        printf("大端\n");
+    }
+    return 0;
+}
