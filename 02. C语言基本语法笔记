@@ -600,3 +600,25 @@ int main() {
     printf("%s\n",arr);
     return 0;
 }
+
+
+
+// 求一个数字各位之和 - 递归方式
+#include <stdio.h>
+#include <string.h>
+
+int DigiSum(unsigned int num){
+    if(num > 9){
+        return DigiSum(num/10)+num%10;
+    }else{
+        return num;
+    }
+}
+
+int main() {
+    unsigned int num = 0;
+    scanf("%d",&num);
+    int ret = DigiSum(num);
+    printf("ret = %d \n", ret);
+    return 0;
+}
