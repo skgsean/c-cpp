@@ -149,3 +149,26 @@ int main()
     return 0;
 }
 
+
+
+
+// 
+#include <stdio.h>
+#include <assert.h>
+
+int my_strlen(const char *str){  // const保证str不被修改
+    int count = 0;
+    assert(str!=NULL);  // 断言 保证指针有效性
+    while(*str != '\0'){
+        count ++;
+        str++;
+    }
+    return count;
+}
+int main(){
+    char arr[] = "abcdefgh";
+    int len = my_strlen(arr);
+    printf("%d\n",len);
+    return 0;
+}
+
