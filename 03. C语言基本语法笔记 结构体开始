@@ -64,3 +64,28 @@ int main()
     Stu s2;  // 用重命名的结构体名称声明结构体变量
     return 0;
 }
+
+
+
+#include <stdio.h>
+// struct - 结构体关键字
+// Stu - 结构体标签
+// struct Stu - 结构体类型
+typedef struct Stu  // 用typedef给结构体重命名
+{
+    // 成员变量
+    char name[20];
+    short age;
+    char tele[12];
+    char sex[5];
+}Stu;  
+
+
+int main()
+{
+    struct Stu s1 = {"张三",20,"13800138000","男"};  // 初始化
+    Stu s2 = {"张五",25,"13800138000","保密"};
+    return 0;
+}
+
+
