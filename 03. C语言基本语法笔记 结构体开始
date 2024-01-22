@@ -43,3 +43,24 @@ int main()
 }
 
 
+
+#include <stdio.h>
+// struct - 结构体关键字
+// Stu - 结构体标签
+// struct Stu - 结构体类型
+typedef struct Stu  // 用typedef给结构体重命名
+{
+    // 成员变量
+    char name[20];
+    short age;
+    char tele[12];
+    char sex[5];
+}Stu;  
+
+
+int main()
+{
+    struct Stu s1;  // s是局部的结构体变量
+    Stu s2;  // 用重命名的结构体名称声明结构体变量
+    return 0;
+}
