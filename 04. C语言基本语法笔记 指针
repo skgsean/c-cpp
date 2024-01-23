@@ -10,3 +10,29 @@ int main()
     return 0;
 }
 
+
+
+
+
+//
+#include <stdio.h>
+int main()
+{
+    char arr1[] = "abcdef";
+    char arr2[] = "abcdef";
+    char* p1 = "abcdef";
+    char* p2 = "abcdef";
+
+    if(arr1 == arr2){
+        printf("arr1 == arr2\n");
+    }else{
+        printf("arr1 != arr2\n");  // arr1 != arr2
+    }
+
+    if(p1 == p2){
+        printf("p1 == p2\n");  // p1 == p2
+    }else{
+        printf("p1 != p2\n");
+    }
+    return 0;
+}
