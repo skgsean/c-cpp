@@ -1,0 +1,12 @@
+
+
+//
+#include <stdio.h>
+int main()
+{
+    char* p = "abcdef";
+    printf("%c\n",*p);  // a
+    printf("%s\n",p);   // abcdef
+    return 0;
+}
+
