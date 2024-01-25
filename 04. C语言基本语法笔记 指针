@@ -365,3 +365,27 @@ int main(){
 test
 hehe:bit
  */
+
+
+#include <stdio.h>
+int Add(int x, int y){
+    return x+y;
+}
+
+int main(){
+    // 指针数组
+	int* arr[10];
+    // 数组指针
+    int* (*pa)[10] = &arr;
+    // 函数指针
+    int (*pAdd)(int, int) = Add;  // &Add
+    int sum = (*pAdd)(1,2); // 函数指针
+    //int sum = pAdd(1,2);  // 3 函数指针
+    //int sum = Add(1,2);  // 3
+    printf("sum = %d\n",sum);  // 3
+    // 函数指针的数组
+    int(*pArr[5])(int, int); // 这里的5表示元素个数，按照需要写
+    // 指向函数指针数组的指针
+    int(*(*ppArr)[5])(int,int) = &pArr;
+	return 0;
+}
