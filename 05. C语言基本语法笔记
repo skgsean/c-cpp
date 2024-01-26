@@ -16,13 +16,13 @@ int main(){
 
 
 
-
-
-//// 逆序函数
+// 逆序函数
 #include <stdio.h>
 #include <string.h>
+#include <assert.h>
 
 void reverse(char* str){
+    assert(str);  // 保证指针有效性
     int len = strlen(str);
     char* left = str;
     char* right = str + len -1;
